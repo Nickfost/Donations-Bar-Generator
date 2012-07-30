@@ -60,21 +60,5 @@
  echo "<p>enabled perecent in red  = " .$enabledpercentinred. "</p>";
  echo "<p><h6>This was made with Nickfost's Donations Bar Generator V. 1.3</h6>";
  }
- // Changelog
- // ----1.3----
- // fixed some incompatabilities with crappy browsers
- // fixed the size of text not working becuase of not using the "px" letters after the number (stupid css)
- // updated version number
- // ----1.2----
- // Added font size
- // Changed breakline tag in debug to using paragraph tags
- // color apeared in debug where defined (you'll see)
- // updated version number :D
- // ----1.1----
- // Added changelog (:D)
- // Cleaned up a few loose things (cant really remember)
- // updated version number :D
- // ----1.0----
- // Initial release
  ?>
  
