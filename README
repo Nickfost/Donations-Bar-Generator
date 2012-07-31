@@ -9,7 +9,7 @@ How to setup/use
 Changelog
 	----1.4----
 		Added the ability to change the color in the text displayed on the bar
-		
+		Added the ability to limit the number of decimal places after the percentage can be displayed
 	----1.3----
 		fixed some incompatabilities with crappy browsers
 		fixed the size of text not working becuase of not using the "px" letters after the number (stupid css)

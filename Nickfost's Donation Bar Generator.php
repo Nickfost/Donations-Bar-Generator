@@ -9,7 +9,8 @@
  $percentinred = off; 			// show the amount completed in the red bar "off" is off "on" is on
  $alternategreen = green;		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
  $alternatered = red;			// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
- $textcolor = Black;			// the text color on the percentage
+ $textcolor = Black;			// the text color on the percentage (percentinred must be on)
+ $decimalplacelimit = 2;		// the number of decimal places in the percentage (perecentinred must be on)
  $debug = off; 					// print debug informations "on" for on and "off" for off
  //math
  $ratio = $donations / $cost;
@@ -19,10 +20,11 @@
 	$greenwidth = $width;
  }
  $redwidth = $width - $greenwidth;
- //percent in red
+ //percent in red caclulations
  if ($percentinred == on){
-	 if ($percent < 98) {
-		$enabledpercentinred = $percent. "%";
+	 $percentinred = (round($decimalplacelimit,$percentinred);
+	 if ($percent < 95) {
+		 $enabledpercentinred = $percent. "%";
 	 } 
  }
  ?>
@@ -50,6 +52,7 @@
  echo "<p style='color:".$alternategreen.";'>Alternate Green = " .$alternategreen. "</p>";
  echo "<p style='color:".$alternatered.";'>Alternate Red = " .$alternatered. "</p>";
  echo "<p style='color:".$textcolor.";'>Text Color = " .$textcolor. "</p>";
+ echo "<p>Decimal Place Limit = " .$decimalplacelimit. "</p>";
  echo "<p>Debug = " .$debug. "</p>";
  echo "<br />Math section<br />";
  echo "<p>-------------</p>";
