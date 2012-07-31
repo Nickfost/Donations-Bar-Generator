@@ -10,18 +10,19 @@ Changelog
 	----1.4----
 		Added the ability to change the color in the text displayed on the bar
 		Added the ability to limit the number of decimal places after the percentage can be displayed
+		Updated Version number & synced with GitHub
 	----1.3----
-		fixed some incompatabilities with crappy browsers
-		fixed the size of text not working becuase of not using the "px" letters after the number (stupid css)
-		updated version number
+		Fixed some incompatabilities with crappy browsers
+		Fixed the size of text not working becuase of not using the "px" letters after the number (stupid css)
+		Updated version number
 	----1.2----
 		Added font size
 		Changed breakline tag in debug to using paragraph tags
-		color apeared in debug where defined (you'll see)
-		updated version number :D
+		Color apeared in debug where defined (you'll see)
+		Updated version number
 	----1.1----
 		Added changelog (:D)
 		Cleaned up a few loose things (cant really remember)
-		updated version number :D
+		updated version number
 	----1.0----
 		Initial release
