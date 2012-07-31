@@ -22,7 +22,7 @@
  $redwidth = $width - $greenwidth;
  //percent in red caclulations
  if ($percentinred == on){
-	 $percentinred = (round($decimalplacelimit,$percentinred);
+	 $percentinred = (round($decimalplacelimit,$percentinred));
 	 if ($percent < 95) {
 		 $enabledpercentinred = $percent. "%";
 	 } 
