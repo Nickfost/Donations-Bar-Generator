@@ -9,6 +9,7 @@
  $percentinred = off; 			// show the amount completed in the red bar "off" is off "on" is on
  $alternategreen = green;		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
  $alternatered = red;			// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
+ $textcolor = Black;			// the text color on the percentage
  $debug = off; 					// print debug informations "on" for on and "off" for off
  //math
  $ratio = $donations / $cost;
@@ -29,10 +30,10 @@
 	<table cellpadding="0" border="0" cellspacing="0">
 		<tr height="<? print $height; ?>" width='<? print $width; ?>px'>
 			<td width='<? print $greenwidth; ?>px' style="background:<? print $alternategreen; ?>;"></td>
-			<td width='<? print $redwidth; ?>px' style="background:<? print $alternatered; ?>; font-size:<? print $fontsize; ?>px;" align='right'><? print $enabledpercentinred; ?></td>
+			<td width='<? print $redwidth; ?>px' style="background:<? print $alternatered; ?>; color:<? print $textcolor; ?>; font-size:<? print $fontsize; ?>px;" align='right'><? print $enabledpercentinred; ?></td>
 		</tr>
 	</table>
-	 <!-- This was made with Nickfost's Donations Bar Generator V. 1.3-->
+	 <!-- This was made with Nickfost's Donations Bar Generator V. 1.4-->
 </div>
  <?php
   //debug
@@ -48,6 +49,7 @@
  echo "<p>Percent in red =" .$percentinred. "</p>";
  echo "<p style='color:".$alternategreen.";'>Alternate Green = " .$alternategreen. "</p>";
  echo "<p style='color:".$alternatered.";'>Alternate Red = " .$alternatered. "</p>";
+ echo "<p style='color:".$textcolor.";'>Text Color = " .$textcolor. "</p>";
  echo "<p>Debug = " .$debug. "</p>";
  echo "<br />Math section<br />";
  echo "<p>-------------</p>";
@@ -58,7 +60,7 @@
  echo "<br />OTHER<br />";
  echo "<p>-------------</p>";
  echo "<p>enabled perecent in red  = " .$enabledpercentinred. "</p>";
- echo "<p><h6>This was made with Nickfost's Donations Bar Generator V. 1.3</h6>";
+ echo "<p><h6>This was made with Nickfost's Donations Bar Generator V. 1.4</h6>";
  }
  ?>
  

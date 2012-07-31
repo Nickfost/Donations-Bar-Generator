@@ -7,6 +7,9 @@ How to setup/use
 	Say thanks! 
 
 Changelog
+	----1.4----
+		Added the ability to change the color in the text displayed on the bar
+		
 	----1.3----
 		fixed some incompatabilities with crappy browsers
 		fixed the size of text not working becuase of not using the "px" letters after the number (stupid css)
