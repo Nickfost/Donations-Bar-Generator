@@ -8,6 +8,9 @@ How to setup/use
 	Say thanks! 
 
 Changelog
+	----1.5---
+		Fixed the rounding of the percent
+		Updated version number
 	----1.4----
 		Added the ability to change the color in the text displayed on the bar
 		Added the ability to limit the number of decimal places after the percentage can be displayed
