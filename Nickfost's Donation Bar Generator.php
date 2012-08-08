@@ -35,7 +35,7 @@
 			<td width='<? print $redwidth; ?>px' style="background:<? print $alternatered; ?>; color:<? print $textcolor; ?>; font-size:<? print $fontsize; ?>px;" align='right'><? print $enabledpercentinred; ?></td>
 		</tr>
 	</table>
-	 <!-- This was made with Nickfost's Donations Bar Generator V. 1.4-->
+	 <!-- This was made with Nickfost's Donations Bar Generator V. 1.5-->
 </div>
  <?php
   //debug
@@ -63,7 +63,7 @@
  echo "<br />OTHER<br />";
  echo "<p>-------------</p>";
  echo "<p>enabled perecent in red  = " .$enabledpercentinred. "</p>";
- echo "<p><h6>This was made with Nickfost's Donations Bar Generator V. 1.4</h6>";
+ echo "<p><h6>This was made with Nickfost's Donations Bar Generator V. 1.5</h6>";
  }
  ?>
  
