@@ -6,12 +6,12 @@
  $width = 500;		 			//width of bar
  $height = 10;					// the hight of the bar, defualt is 1 (modified by text)
  $fontsize = 10;				// Size of the font in pexels...
- $percentinred = off; 			// show the amount completed in the red bar "off" is off "on" is on
- $alternategreen = green;		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
- $alternatered = red;			// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
- $textcolor = Black;			// the text color on the percentage (percentinred must be on)
+ $percentinred = 'off'; 			// show the amount completed in the red bar "off" is off "on" is on
+ $alternategreen = 'green';		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
+ $alternatered = 'red';			// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
+ $textcolor = 'Black';			// the text color on the percentage (percentinred must be on)
  $decimalplacelimit = 2;		// the number of decimal places in the percentage (perecentinred must be on)
- $debug = off; 					// print debug informations "on" for on and "off" for off
+ $debug = 'off'; 					// print debug informations "on" for on and "off" for off
  //math
  $ratio = $donations / $cost;
  $percent = $ratio * 100;
@@ -21,7 +21,7 @@
  }
  $redwidth = $width - $greenwidth;
  //percent in red caclulations
- if ($percentinred == on){
+ if ($percentinred == 'on'){
 	 $percent = round($percent,$decimalplacelimit);
 	 if ($percent < 95) {
 		 $enabledpercentinred = $percent. "%";
@@ -39,7 +39,7 @@
 </div>
  <?php
   //debug
- if ($debug == on){
+ if ($debug == 'on'){
  echo "<br /><h3>DEBUG</h3><br />";
  echo "<p>CONFIG></p>";
  echo "<p>-------------</p>";
