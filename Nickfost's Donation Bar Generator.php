@@ -1,16 +1,16 @@
 <?php
  //This is a simple bar to indicate the amout of donation to a project or comunity 
  //Config
- $cost = 100; 					//cost to operate
- $donations = 10;	 			//current donations
- $width = 500;		 			//width of bar
- $height = 10;					// the hight of the bar, defualt is 1 (modified by text)
- $fontsize = 10;				// Size of the font in pexels...
+ $cost = '100'; 					//cost to operate
+ $donations = '10';	 			//current donations
+ $width = '500';		 			//width of bar
+ $height = '10';					// the hight of the bar, defualt is 1 (modified by text)
+ $fontsize = '10';				// Size of the font in pexels...
  $percentinred = 'off'; 			// show the amount completed in the red bar "off" is off "on" is on
  $alternategreen = 'green';		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
  $alternatered = 'red';			// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
  $textcolor = 'Black';			// the text color on the percentage (percentinred must be on)
- $decimalplacelimit = 2;		// the number of decimal places in the percentage (perecentinred must be on)
+ $decimalplacelimit = '2';		// the number of decimal places in the percentage (perecentinred must be on)
  $debug = 'off'; 					// print debug informations "on" for on and "off" for off
  //math
  $ratio = $donations / $cost;
