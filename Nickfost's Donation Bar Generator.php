@@ -1,19 +1,39 @@
 <?php
  //This is a simple bar to indicate the amout of donation to a project or comunity 
  //Config
- $cost = '100'; 					//cost to operate
- $donations = '10';	 			//current donations
- $width = '500';		 			//width of bar
- $height = '10';					// the hight of the bar, defualt is 1 (modified by text)
- $fontsize = '10';				// Size of the font in pexels...
- $percentinred = 'off'; 			// show the amount completed in the red bar "off" is off "on" is on
- $alternategreen = 'green';		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
- $alternatered = 'red';			// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
- $textcolor = 'Black';			// the text color on the percentage (percentinred must be on)
- $decimalplacelimit = '2';		// the number of decimal places in the percentage (perecentinred must be on)
- $debug = 'off'; 					// print debug informations "on" for on and "off" for off
- //math
- $ratio = $donations / $cost;
+ if(!isset($cost))
+	$cost = '100'; 			//cost to operate
+ 
+ if(!isset($donations))
+	$donations = '10';	 	//current donations
+ 
+ if(!isset($width))
+	$width = '500';		 	//width of bar
+
+ if(!isset($height))
+	$height = '10';			// the hight of the bar, defualt is 1 (modified by text)
+	
+ if(!isset($fontsize))
+	$fontsize = '10';			// Size of the font in pexels...
+	
+ if(!isset($percentinred))
+	$percentinred = 'off'; 		// show the amount completed in the red bar "off" is off "on" is on
+	
+ if(!isset($alternategreen))
+	$alternategreen = 'green';		// alternate color for the green, leave green if you want it to stay green, color codes and words work. 
+	
+ if(!isset($alternatered))
+	$alternatered = 'red';		// alternate color for the red, leave red if you want it to stay red, you can use a color code or the word. if you using a color code be sure to leave out the number sign or it wont work
+ 
+ if(!isset($textcolor))
+	$textcolor = 'Black';		// the text color on the percentage (percentinred must be on)
+	
+ if(!isset($decimalplacelimit))
+	$decimalplacelimit = '2';		// the number of decimal places in the percentage (perecentinred must be on)
+ 
+ if(!isset($debug))
+	$debug = 'off'; 			// print debug informations "on" for on and "off" for off
+ //math $ratio = $donations / $cost;
  $percent = $ratio * 100;
  $greenwidth = $ratio * $width;
   if ($greenwidth > $width) {
@@ -30,9 +50,9 @@
  ?>
 <div id="Donations bar">
 	<table cellpadding="0" border="0" cellspacing="0">
-		<tr height="<? print $height; ?>" width='<? print $width; ?>px'>
-			<td width='<? print $greenwidth; ?>px' style="background:<? print $alternategreen; ?>;"></td>
-			<td width='<? print $redwidth; ?>px' style="background:<? print $alternatered; ?>; color:<? print $textcolor; ?>; font-size:<? print $fontsize; ?>px;" align='right'><? print $enabledpercentinred; ?></td>
+		<tr height="<?php print $height; ?>" width='<?php print $width; ?>px'>
+			<td width='<?php print $greenwidth; ?>px' style="background:<?php print $alternategreen; ?>;"></td>
+			<td width='<?php print $redwidth; ?>px' style="background:<?php print $alternatered; ?>; color:<?php print $textcolor; ?>; font-size:<?php print $fontsize; ?>px;" align='right'><?php print $enabledpercentinred; ?></td>
 		</tr>
 	</table>
 	 <!-- This was made with Nickfost's Donations Bar Generator V. 1.5-->
