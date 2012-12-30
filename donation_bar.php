@@ -4,16 +4,15 @@
 	//---------------
 
 	$danationsbar_conf = array();
-	// Total amount you're looking for. (default: 100)
+	// Total amount you're of money you're looking for. (default: 100)
 	$danationsbar_conf['cost'] = 100;
-	// Current amount donated. (TODO: Fetch from somewhere like PayPal?) (default: 0)
+	// Current amount donated. (TODO: Fetch from somewhere like PayPal?: Yes!) (default: 0)
 	$danationsbar_conf['donations'] = 0;
-	
 	// Width of the bar;  can be 100%, 100px, etc. (default: 100%)
 	$danationsbar_conf['width'] = '100%';
 	// Height of the bar; can be 100%, 100px, etc. (default: 10px)
 	$danationsbar_conf['height'] = '10px';
-	// Obviously the size of the font in em/px. (default: 10px)
+	// The size of the font in em/px. (default: 10px)
 	$danationsbar_conf['font_size'] = '10px';
 	
 	// Should we show how much is fullfilled, how much is needed, etc? (default: false) (TODO! Not functional)
@@ -24,7 +23,6 @@
 	$danationsbar_conf['color_missing'] = '#eb4444';
 	// CSS color for the text shown. (default: #000000)
 	$danationsbar_conf['color_text'] = '#000000';
-
 	// How many decimal places should we format to? (default: 2)
 	$danationsbar_conf['decimal_places'] = 2;
 
@@ -43,7 +41,7 @@
 ?>
 <style>
 div#donations-bar {
-	width: 100%;
+	width: 100%; /*what?*/
 }
 div#donations-bar-inner {
 	width: <?php echo $danationsbar_conf['width'] ?>;
@@ -74,7 +72,7 @@ div.donations-bar-inner.red {
 </div>
 <?php
 if ($danationsbar_conf['debug']) {
-	echo '<p>' . PHP_EOL;
+	echo '<p>' . PHP_EOL; // IDK what this is...
 	echo '<h2>$danationsbar_conf</h2>' . PHP_EOL;
 	echo '<pre>';
 	echo var_dump($danationsbar_conf);
