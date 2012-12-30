@@ -47,45 +47,44 @@
 	$stats = array();
 	
 	if ($donationsbar_conf['show_stats'] = true) {
-		if ($donationsbar_conf['detailed_stats'] = true) {
-			$stats['output'] = ($donationsbar_conf['donations']) .'/'. $donationsbar_conf['cost'];	
-		}
-		else{
-			$stats['output'] = $math['percent'];
-		}
-		
+		if ($donationsbar_conf['detailed_stats'] = true) {$stats['output'] = ($donationsbar_conf['donations']) .'/'. $donationsbar_conf['cost'];}
+		if ($donationsbar_conf['detailed_stats'] = false) {$stats['output'] = $math['percent'];}
 	}
-	
+	// Something here ^ is probably broken... IDK what -Nickfost
 	
 ?>
 <style>
-div#donations-bar {
-	width: 100%;
-}
-div#donations-bar-inner {
-	width: <?php echo $donationsbar_conf['width'] ?>;
-	height: <?php echo $donationsbar_conf['height'] ?>;
-	font-size: 0;
-}
-div.donations-bar-inner {
-	height: 100%;
-	display: inline-block;
-	margin: 0 auto;
-	padding: 0;
-}
-div.donations-bar-inner.green {
-	background-color: <?php echo $donationsbar_conf['color_complete'] ?>;
-	width: <?php echo $math['p_green'] ?>;
-}
-div.donations-bar-inner.red {
-	background-color: <?php echo $donationsbar_conf['color_missing'] ?>;
-	width: <?php echo $math['p_red'] ?>;
-}
+	div#donations-bar {
+		width: 100%;
+	}
+	div#donations-bar-inner {
+		width: <?php echo $donationsbar_conf['width'] ?>;
+		height: <?php echo $donationsbar_conf['height'] ?>;
+		font-size: 0;
+	}
+	div.donations-bar-inner {
+		height: 100%;
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0;
+	}
+	div.donations-bar-inner.green {
+		background-color: <?php echo $donationsbar_conf['color_complete'] ?>;
+		width: <?php echo $math['p_green'] ?>;
+	}
+	div.donations-bar-inner.red {
+		background-color: <?php echo $donationsbar_conf['color_missing'] ?>;
+		width: <?php echo $math['p_red'] ?>;
+	}
+	p.donations-bar-inner red{
+		line-hieght:<?php echo $donationsbar_conf['font_size'] ?>;
+		color:<?php echo $donationsbar_conf['color_text'] ?>;
+	}
 </style>
 <div id="donations-bar">
 	<div id="donations-bar-inner">
 		<div class="donations-bar-inner green"></div>
-		<div class="donations-bar-inner red"></div>
+		<div class="donations-bar-inner red"><p class="donations-bar-inner red" ><?php echo $stats['output'] ?></p></div>
 	</div>
 	<!-- Want your own bar? https://github.com/Nickfost/Donations-Bar-Generator -->
 </div>
@@ -100,11 +99,11 @@ if ($donationsbar_conf['debug']) {
 	echo '<pre>';
 	echo var_dump($math, true);
 	echo '</pre> ' . PHP_EOL;
-	echo '</p>';
 	echo '<h2>$stats</h2>' . PHP_EOL;
 	echo '<pre>';
 	echo var_dump($stats, true);
 	echo '</pre> ' . PHP_EOL;
+	echo 'Find an error or need a new copy? <a href="https://github.com/Nickfost/Donations-Bar-Generator">CLICK HERE</a>';
 	echo '</p>';
 }
 ?>
