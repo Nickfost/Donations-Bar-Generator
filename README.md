@@ -20,6 +20,9 @@ TODO
 
 Changelog
 ---
+### 2.0.2
++ working on stats still disabled by defualt
+
 ### 2.0.1
 + Tiny Things... (Wording and comments)
 
