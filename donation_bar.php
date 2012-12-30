@@ -17,6 +17,8 @@
 	
 	// Should we show how much is fullfilled, how much is needed, etc? (default: false) (TODO! Not functional)
 	$danationsbar_conf['show_stats'] = false;
+	// Detailed stats ex: true, 25/100 false, 25% 
+	$danationsbar_conf['detailed'] = false;
 	// CSS color for completed amount. (default: #68a976)
 	$danationsbar_conf['color_complete'] = '#68a976';
 	// CSS color for missing amount. (default: #eb4444)
@@ -42,7 +44,12 @@
 	//---------------
 	// Stats
 	//---------------
-
+	$stats = array();
+	
+	if ($danationsbar_conf['show_stats'] = true) {
+		
+	}
+	
 	
 ?>
 <style>
