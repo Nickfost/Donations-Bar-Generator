@@ -18,7 +18,7 @@
 	// Should we show how much is fullfilled, how much is needed, etc? (default: false) (TODO! Not functional)
 	$donationsbar_conf['show_stats'] = false;
 	// Detailed stats ex: true, 25/100 false, 25% 
-	$donationsbar_conf['detailed'] = false;
+	$donationsbar_conf['detailed_stats'] = false;
 	// CSS color for completed amount. (default: #68a976)
 	$donationsbar_conf['color_complete'] = '#68a976';
 	// CSS color for missing amount. (default: #eb4444)
@@ -47,6 +47,12 @@
 	$stats = array();
 	
 	if ($donationsbar_conf['show_stats'] = true) {
+		if ($donationsbar_conf['detailed_stats'] = true) {
+			$stats['output'] = ($donationsbar_conf['donations']) .'/'. $donationsbar_conf['cost'];	
+		}
+		else{
+			$stats['output'] = $math['percent'];
+		}
 		
 	}
 	
@@ -54,7 +60,7 @@
 ?>
 <style>
 div#donations-bar {
-	width: 100%; /*what?*/
+	width: 100%;
 }
 div#donations-bar-inner {
 	width: <?php echo $donationsbar_conf['width'] ?>;
@@ -85,7 +91,7 @@ div.donations-bar-inner.red {
 </div>
 <?php
 if ($donationsbar_conf['debug']) {
-	echo '<p>' . PHP_EOL; // IDK what this is...
+	echo '<p>' . PHP_EOL;
 	echo '<h2>$donationsbar_conf</h2>' . PHP_EOL;
 	echo '<pre>';
 	echo var_dump($donationsbar_conf);
@@ -93,6 +99,11 @@ if ($donationsbar_conf['debug']) {
 	echo '<h2>$math</h2>' . PHP_EOL;
 	echo '<pre>';
 	echo var_dump($math, true);
+	echo '</pre> ' . PHP_EOL;
+	echo '</p>';
+	echo '<h2>$stats</h2>' . PHP_EOL;
+	echo '<pre>';
+	echo var_dump($stats, true);
 	echo '</pre> ' . PHP_EOL;
 	echo '</p>';
 }
