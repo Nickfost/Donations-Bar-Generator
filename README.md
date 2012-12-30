@@ -20,6 +20,9 @@ TODO
 
 Changelog
 ---
+### 2.0.1
++ Tiny Things... (Wording and comments)
+
 
 ### 2.0
 + Near complete rewrite.
