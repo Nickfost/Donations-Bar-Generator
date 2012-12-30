@@ -13,16 +13,17 @@ How to setup/use
 
 TODO
 ---
-+ Move the css into the <head> tag, so as not to ruin valid HTML5.
++ Move the css into the \<head\> tag, so as not to ruin valid HTML5.
 + Make it more customisable.
 + Move to a method instead of a script to include.
 + Move configuration into a separate script, so as to minimise potential problems.
 
 Changelog
 ---
+
 ### 2.0
 + Near complete rewrite.
-+ Moved from a table to <div>s aswell as some css.
++ Moved from a table to \<div\>s aswell as some css.
 + Cleaned up configuration to make it easier for users.
 + Math is now cleaned and streamlined, making the script simpler.
 + Cleaned up debug section so that it's a simple var_dump().
