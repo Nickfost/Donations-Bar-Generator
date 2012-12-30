@@ -38,6 +38,12 @@
 	$math['percent'] = ($math['ratio'] != 0 ? $math['ratio'] * 100 : 100);
 	$math['p_green'] = (($math['ratio'] * 100) - 1) . '%';
 	$math['p_red'] = 100 - ($math['ratio'] * 100) . '%';
+	
+	//---------------
+	// Stats
+	//---------------
+
+	
 ?>
 <style>
 div#donations-bar {
