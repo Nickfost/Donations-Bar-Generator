@@ -17,7 +17,7 @@
 	
 	// Should we show how much is fullfilled, how much is needed, etc? (default: false) (TODO! Not functional)
 	$donationsbar_conf['show_stats'] = false;
-	// Detailed stats ex: true, 25/100 false, 25% 
+	// Detailed stats ex: true, 25/100 false, 25% (defualt: false)
 	$donationsbar_conf['detailed_stats'] = false;
 	// CSS color for completed amount. (default: #68a976)
 	$donationsbar_conf['color_complete'] = '#68a976';
