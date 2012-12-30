@@ -20,6 +20,8 @@ TODO
 
 Changelog
 ---
+### 2.0.3
++ another attemp at stats.. should be finished by now
 ### 2.0.2
 + working on stats still disabled by defualt
 
