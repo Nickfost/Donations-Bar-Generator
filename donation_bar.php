@@ -8,6 +8,8 @@
 	$donationsbar_conf['cost'] = 100;
 	// Current amount donated. (TODO: Fetch from somewhere like PayPal?: Yes!) (default: 0)
 	$donationsbar_conf['donations'] = 0;
+	// Your local currency symbol. (default: $)
+	$donationsbar_conf['currency'] = '$';
 	// Width of the bar;  can be 100%, 100px, etc. (default: 100%)
 	$donationsbar_conf['width'] = '100%';
 	// Height of the bar; can be 100%, 100px, etc. (default: 10px)
@@ -17,7 +19,7 @@
 	
 	// Should we show how much is fullfilled, how much is needed, etc? (default: false) (TODO! Not functional)
 	$donationsbar_conf['show_stats'] = false;
-	// Detailed stats ex: true, 25/100 false, 25% (defualt: false)
+	// Detailed stats ex: true, $25/$100; false, 25% (default: false)
 	$donationsbar_conf['detailed_stats'] = false;
 	// CSS color for completed amount. (default: #68a976)
 	$donationsbar_conf['color_complete'] = '#68a976';
@@ -30,6 +32,8 @@
 
 	// This will just dump information about the configuration. (default: false)
 	$donationsbar_conf['debug'] = false;
+
+	//!!/ DON'T CHANGE ANYTHING BELOW THIS LINE! /!!//
 
 	//---------------
 	// Math
@@ -47,13 +51,16 @@
 	$stats = array();
 	
 	if ($donationsbar_conf['show_stats'] = true) {
-		if ($donationsbar_conf['detailed_stats'] = true) {$stats['output'] = ($donationsbar_conf['donations']) .'/'. $donationsbar_conf['cost'];}
-		if ($donationsbar_conf['detailed_stats'] = false) {$stats['output'] = $math['percent'];}
+		if ($donationsbar_conf['detailed_stats']) {
+			$stats['output'] = ($donationsbar_conf['donations']) .'/'. $donationsbar_conf['cost'];
+		}
+		else {
+			$stats['output'] = $math['percent'];
+		}
 	}
-	// Something here ^ is probably broken... IDK what -Nickfost
 	
 ?>
-<style>
+<style type="text/css">
 	div#donations-bar {
 		width: 100%;
 	}
@@ -103,7 +110,7 @@ if ($donationsbar_conf['debug']) {
 	echo '<pre>';
 	echo var_dump($stats, true);
 	echo '</pre> ' . PHP_EOL;
-	echo 'Find an error or need a new copy? <a href="https://github.com/Nickfost/Donations-Bar-Generator">CLICK HERE</a>';
+	echo 'Problems or suggestions? <a href="https://github.com/Nickfost/Donations-Bar-Generator">Visit the git repo!</a>';
 	echo '</p>';
 }
 ?>
