@@ -20,10 +20,16 @@ TODO
 
 Changelog
 ---
+### 2.1.0
++ Stats now functional, thanks to some slight css hacks.
++ Cleaned up some of the source more.
++ Fixed slight discrepancy between width of shown bars and actual width it should be.
+
 ### 2.0.3
-+ another attemp at stats.. should be finished by now
++ Another attempt at stats.. should be finished by now
+
 ### 2.0.2
-+ working on stats still disabled by defualt
++ Working on stats still disabled by defualt
 
 ### 2.0.1
 + Tiny Things... (Wording and comments)
