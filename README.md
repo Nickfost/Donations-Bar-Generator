@@ -35,9 +35,9 @@ How to setup/use
 
 TODO
 ---
-+ [X] Move the css into the \<head\> tag, so as not to ruin valid HTML5. (__Now easy with `$dbar->to_css()`__)
-+ [ ] Make it more customisable.
-+ [X] Move to a method instead of a script to include. (__Now in a class__)
+- [X] Move the css into the \<head\> tag, so as not to ruin valid HTML5. (__Now easy with `$dbar->to_css()`__)
+- [ ] Make it more customisable.
+- [X] Move to a method instead of a script to include. (__Now in a class__)
 
 Changelog
 ---
