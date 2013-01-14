@@ -6,20 +6,46 @@ How to setup/use
 + Make sure your webserver supports php.
 + Download the newest verion here: https://github.com/Nickfost/Donations-Bar-Generator/zipball/master
 + Open the file in your text editor of choice.
-+ Edit the configuration as required. (Under _Configuration_ header in PHP file.)
-+ Include it in your script as needed! (`include_once('donation_bar.php');`)
++ Edit the configuration as required. (Under _DonationBar::config()_ method in the PHP file.)
++ Include and use, as per below.
 + Say thanks!
-+ It might need tweaking to make it perfectly position in your layout.
+
+```php
+<?php
+	# Includes, whatever.
+	include_once('donation_bar.php');
+	$dbar = new DonationBar();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+	<!-- Put the <style> for the bar in your <head> for valid HTML5. -->
+	<?php echo $dbar->to_css(); ?>
+	<!-- rest of stuff here -->
+</head>
+<body>
+	<!-- Content! -->
+	<!-- Output the HTML for the bar. -->
+	<?php echo $dbar->to_html(); ?>
+	<!-- More content! -->
+</body>
+</html>
+```
 
 TODO
 ---
-+ Move the css into the \<head\> tag, so as not to ruin valid HTML5.
-+ Make it more customisable.
-+ Move to a method instead of a script to include.
-+ Move configuration into a separate script, so as to minimise potential problems.
++ [X] Move the css into the \<head\> tag, so as not to ruin valid HTML5. (__Now easy with `$dbar->to_css()`__)
++ [ ] Make it more customisable.
++ [X] Move to a method instead of a script to include. (__Now in a class__)
 
 Changelog
 ---
+### 2.2.0
++ Moved from inclusion to a class. Much easier now.
++ Cleaned up CSS and html more.
++ README cleanup.
+
 ### 2.1.0
 + Stats now functional, thanks to some slight css hacks.
 + Cleaned up some of the source more.
